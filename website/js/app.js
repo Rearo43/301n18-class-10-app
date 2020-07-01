@@ -17,7 +17,9 @@ function showThingsToDo() {
   // ];
   // renderThings(things);
 
-  $.ajax('/server/')
+  $.ajax('http://localhost:3000/todo').then(data =>{
+    renderThings(data);
+  })
 
 }
 
