@@ -12,7 +12,7 @@ app.use(cors());
 const PORT = 3000;
 
 // Route Definitions
-app.get('/todo', handleToDo());
+app.get('/todo', handleToDo);
 
 // Route Handlers
 function handleToDo(request, response) {
@@ -30,8 +30,8 @@ function handleToDo(request, response) {
 }
 
 // Go!
-function startServer() {
-  express.listen(PORT, () => console.log('Server is running'));
+function startServer(ugg) {
+  ugg.listen(PORT, () => console.log('Server is running'));
 }
 
-startServer();
+startServer(app);
